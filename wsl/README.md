@@ -1,0 +1,44 @@
+# Windows Subsystem for Linux
+
+This documentation is designed to offer a detailed, step-by-step guide for configuring the Windows Subsystem for Linux (WSL) on your target machine.
+
+# Purpose
+
+The purpose of this document is to provide guidance for setting up a new WSL instance, installing all the necessary tools, and the maintanance of them.
+
+# Overview
+
+The Windows Subsystem for Linux (WSL) enables you to run a GNU/Linux environment, complete with a wide range of command-line tools, utilities, and applications, directly on Windows. This can be accomplished without making any modifications to the Linux environment, and it avoids the resource overhead associated with traditional virtual machines or dual-boot configurations.
+
+# Prerequisites
+
+You must be running Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11 to use the commands below. If you are on earlier versions please see [the manual install page](https://learn.microsoft.com/en-us/windows/wsl/install-manual). 
+
+* The virtualization thechnology must be enabled in the computer's BIOS settings.
+* Install Hyper-V by following the steps outlined in the official documentation for  [Windows](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) and [Windows Server](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server)
+
+# WSL installation
+
+For a detailed guide on how to install Linux on Windows using WSL, you can refer to [the official Microsoft documentation](https://learn.microsoft.com/en-us/windows/wsl/install). The page provides a comprehensive overview of the available installation options, and it is recommended that you follow the steps outlined there for a complete installation.
+
+For a more concise version of the installation procedure, the following steps are provided below.
+
+# Install WSL command
+
+You can now install everything you need to run WSL with a single command. Open PowerShell or Windows Command Prompt in **administrator** mode by right-clicking and selecting "Run as administrator", enter the wsl --install command, then restart your machine.
+
+```powershell
+wsl --install
+```
+
+Following a successful installation, it's necessary to reboot your system to ensure that the changes take effect. After rebooting, you should expect a Windows Command Prompt to automatically appear and proceed with the installation of the Ubuntu distribution. If the automatic installation didn't occur or if you prefer a different Linux distribution, please proceed to the next step to manually install your preferred Linux distribution.
+
+# Change the default Linux distribution installed
+
+By default, the installed Linux distribution will be Ubuntu. This can be changed using the `-d` flag.
+
+* To change the distribution installed, enter: `wsl --install -d <Distribution Name>`. Replace `<Distribution Name>` with the name of the distribution you would like to install.
+* To see a list of available Linux distributions available for download through the online store, enter: `wsl --list --online` or `wsl -l -o`.
+* To install additional Linux distributions after the initial install, you may also use the command: `wsl --install -d <Distribution Name>`.
+
+If you run into an issue during the install process, check the [installation section of the troubleshooting guide](https://learn.microsoft.com/en-us/windows/wsl/troubleshooting#installation-issues).
