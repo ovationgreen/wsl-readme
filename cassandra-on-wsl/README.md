@@ -132,6 +132,22 @@ nodetool status
     - The Cassandra root directory, which contains all the Cassandra-related files and subdirectories, is usually located at **`/etc/cassandra`** for configuration files and **`/usr/share/cassandra`** for the Cassandra binary files on Debian-based systems. On Red Hat-based systems, the Cassandra root directory can be found at **`/etc/cassandra`** and **`/usr/share/cassandra`**.
 2. **Configuration Files:**
     - Configuration files for Cassandra are usually stored in the **`/etc/cassandra`** directory. The primary configuration file is **`cassandra.yaml`**, and other files like **`cassandra-env.sh`**, **`cassandra-rackdc.properties`**, and **`cassandra-topology.properties`** can also be found here.
+3. **Data Directories:**
+    - Cassandra stores data in data directories. By default, these directories are located in **`/var/lib/cassandra/data`**. This is where Cassandra stores the actual data files.
+4. **Commitlog Directory:**
+    - The commitlog directory, which stores write-ahead log files, is typically located in **`/var/lib/cassandra/commitlog`**.
+5. **Saved Caches Directory:**
+    - Saved caches are stored in the **`/var/lib/cassandra/saved_caches`** directory. This is where Cassandra stores cache data to improve read performance.
+6. **Log Files:**
+    - Cassandra log files can be found in the **`/var/log/cassandra`** directory. The primary log file is **`system.log`**.
+7. **Scripts and Binaries:**
+    - The Cassandra binary files, including the **`cassandra`** server, can be found in the **`/usr/share/cassandra`** directory. Additionally, various scripts and utilities can be found here.
+8. **Tools and Utilities:**
+    - Cassandra tools and utilities, such as **`cqlsh`** (Cassandra Query Language Shell), are usually located in **`/usr/share/cassandra/tools`**.
+9. **Startup Scripts:**
+    - Startup scripts for Cassandra, which are used to control the service, are typically located in **`/etc/init.d`** on older systems or managed using systemd service units on newer systems. These files are named **`cassandra`**.
+
+All these file and folder locations are based on a standard installation of Cassandra on Linux, and they may vary slightly depending on the specific Cassandra version, the Linux distribution, and any custom configurations that may have been applied during the installation process.
 
 # Configuration and Further Steps
 
