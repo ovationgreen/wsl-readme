@@ -42,3 +42,32 @@ By default, the installed Linux distribution will be Ubuntu. This can be changed
 * To install additional Linux distributions after the initial install, you may also use the command: `wsl --install -d <Distribution Name>`.
 
 If you run into an issue during the install process, check the [installation section of the troubleshooting guide](https://learn.microsoft.com/en-us/windows/wsl/troubleshooting#installation-issues).
+
+# Set up Linux username and password
+
+Once the process of installing your Linux distribution with WSL is complete, open the distribution (Ubuntu by default) using the Start menu. You will be asked to create a User Name and Password for your Linux distribution.
+
+* Unless requested differently, the username should be set to `miscout.`
+* The password for the `miscout` user should be set as the default password of the `SA` database user.
+
+# Update WSL
+
+Windows Subsystem for Linux (WSL) can be updated through the Windows Update feature. To manually update your WSL version to the latest one, you can use the following command:
+
+```powershell
+wsl --update
+```
+
+Options include:
+
+* `--web-download`: Download the latest update from the GitHub rather than the Microsoft Store.
+
+# Update and upgrade packages
+
+It is recommended to regularly update and upgrade packages using the preferred package manager for your distribution. For Ubuntu or Debian, you can use the following command:
+
+```bash
+sudo apt update && sudo apt upgrade
+```
+
+Windows does not automatically update or upgrade the Linux distribution(s). Users must take control of this task and manage updates and upgrades manually.
