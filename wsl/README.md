@@ -1,17 +1,3 @@
-# Table of Contents
-
-1. [Windows Subsystem for Linux](#windows-subsystem-for-linux)
-2. [Purpose](#purpose)
-3. [Overview](#overview)
-4. [Prerequisites](#prerequisites)
-5. [WSL installation](#wsl-installation)
-6. [Install WSL command](#install-wsl-command)
-7. [Change the default Linux distribution installed](#change-the-default-linux-distribution-installed)
-8. [Set up Linux username and password](#set-up-linux-username-and-password)
-9. [Update WSL](#update-wsl)
-10. [Update and upgrade packages](#update-and-upgrade-packages)
-11. [Configuring WSL firewall rules](#configuring-wsl-firewall-rules)
-
 # Windows Subsystem for Linux
 
 This documentation is designed to offer a detailed, step-by-step guide for configuring the Windows Subsystem for Linux (WSL) on your target machine.
@@ -23,6 +9,17 @@ The purpose of this document is to provide guidance for setting up a new WSL ins
 # Overview
 
 The Windows Subsystem for Linux (WSL) enables you to run a GNU/Linux environment, complete with a wide range of command-line tools, utilities, and applications, directly on Windows. This can be accomplished without making any modifications to the Linux environment, and it avoids the resource overhead associated with traditional virtual machines or dual-boot configurations.
+
+# Table of Contents
+
+1. [Prerequisites](#prerequisites)
+2. [WSL installation](#wsl-installation)
+3. [Install WSL command](#install-wsl-command)
+4. [Change the default Linux distribution installed](#change-the-default-linux-distribution-installed)
+5. [Set up Linux username and password](#set-up-linux-username-and-password)
+6. [Update WSL](#update-wsl)
+7. [Update and upgrade packages](#update-and-upgrade-packages)
+8. [Configuring WSL firewall rules](#configuring-wsl-firewall-rules)
 
 # Prerequisites
 
