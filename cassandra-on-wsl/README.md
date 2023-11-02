@@ -2,15 +2,15 @@
 
 # Table of Contents
 
-1. [Prerequisites](#)
-2. [Update Your System](#)
-3. [Install Java](#)
-4. [Add the Cassandra Repository (Debian/Ubuntu only)](#)
-5. [Install Apache Cassandra](#)
-6. [Start and Enable Cassandra Service](#)
-7. [Verify Cassandra Installation](#)
-8. [Cassandra Folder Structure](#)
-9. [Configuration and Further Steps](#)
+1. [Prerequisites](#prerequisites)
+2. [Update Your System](#update-your-system)
+3. [Install Java](#install-java)
+4. [Add the Cassandra Repository (Debian/Ubuntu only)](#add-the-cassandra-repository-debianubuntu-only)
+5. [Install Apache Cassandra](#install-apache-cassandra)
+6. [Start and Enable Cassandra Service](#start-and-enable-cassandra-service)
+7. [Verify Cassandra Installation](#verify-cassandra-installation)
+8. [Cassandra Folder Structure](#cassandra-folder-structure)
+9. [Configuration and Further Steps](#configuration-and-further-steps)
 
 # Prerequisites
 
