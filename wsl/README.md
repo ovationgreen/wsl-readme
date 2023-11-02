@@ -71,3 +71,7 @@ sudo apt update && sudo apt upgrade
 ```
 
 Windows does not automatically update or upgrade the Linux distribution(s). Users must take control of this task and manage updates and upgrades manually.
+
+# Configuring WSL firewall rules
+
+Microsoft implements Firewall protocols used by Windows to maintain security and block unauthorized network traffic flowing into or out of a local device. To optimize protection for devices in your network, [configure your Windows Firewall based on best practices](https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/best-practices-configuring).
