@@ -36,7 +36,7 @@ For a more concise version of the installation procedure, the following steps ar
 
 # Install WSL command
 
-You can now install everything you need to run WSL with a single command. Open PowerShell or Windows Command Prompt in **administrator** mode by right-clicking and selecting "Run as administrator", enter the wsl --install command, then restart your machine.
+You can now install everything you need to run WSL with a single command. Open PowerShell or Windows Command Prompt in **`administrator`** mode by right-clicking and selecting "Run as administrator", enter the wsl --install command, then restart your machine.
 
 ```powershell
 wsl --install
@@ -46,11 +46,11 @@ Following a successful installation, it's necessary to reboot your system to ens
 
 # Change the default Linux distribution installed
 
-By default, the installed Linux distribution will be Ubuntu. This can be changed using the `-d` flag.
+By default, the installed Linux distribution will be Ubuntu. This can be changed using the **`-d`** flag.
 
-* To change the distribution installed, enter: `wsl --install -d <Distribution Name>`. Replace `<Distribution Name>` with the name of the distribution you would like to install.
-* To see a list of available Linux distributions available for download through the online store, enter: `wsl --list --online` or `wsl -l -o`.
-* To install additional Linux distributions after the initial install, you may also use the command: `wsl --install -d <Distribution Name>`.
+* To change the distribution installed, enter: **`wsl --install -d <Distribution Name>`**. Replace **`<Distribution Name>`** with the name of the distribution you would like to install.
+* To see a list of available Linux distributions available for download through the online store, enter: **`wsl --list --online`** or **`wsl -l -o`**.
+* To install additional Linux distributions after the initial install, you may also use the command: **`wsl --install -d <Distribution Name>`**.
 
 If you run into an issue during the install process, check the [installation section of the troubleshooting guide](https://learn.microsoft.com/en-us/windows/wsl/troubleshooting#installation-issues).
 
@@ -58,8 +58,8 @@ If you run into an issue during the install process, check the [installation sec
 
 Once the process of installing your Linux distribution with WSL is complete, open the distribution (Ubuntu by default) using the Start menu. You will be asked to create a User Name and Password for your Linux distribution.
 
-* Unless requested differently, the username should be set to `miscout.`
-* The password for the `miscout` user should be set as the default password of the `SA` database user.
+* Unless requested differently, the username should be set to **`miscout.`**
+* The password for the **`miscout`** user should be set as the default password of the **`SA`** database user.
 
 # Update WSL
 
@@ -71,7 +71,7 @@ wsl --update
 
 Options include:
 
-* `--web-download`: Download the latest update from the GitHub rather than the Microsoft Store.
+* **`--web-download`**: Download the latest update from the GitHub rather than the Microsoft Store.
 
 # Update and upgrade packages
 

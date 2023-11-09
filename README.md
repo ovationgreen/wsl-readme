@@ -1,4 +1,5 @@
 # Overview
+
 This documentation delivers in-depth, step-by-step guidance on the installation of the Windows Subsystem for Linux (WSL) and the setup of the Cassandra database. It also encompasses the strategies and steps necessary for their maintenance and updates.
 
 # Cassandra
@@ -10,6 +11,7 @@ Starting from version 4.0, Cassandra necessitates a Linux environment for its op
 1. [Installing Windows Subsystem for Linux](wsl/README.md)
 2. [Installing Cassandra on Linux](cassandra-on-linux/README.md)
 3. [Configuring Cassandra](configure-cassandra/README.md)
+4. [Performance Comparison](performance/README.md)
 
 # Contributing
 
