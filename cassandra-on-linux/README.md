@@ -1,5 +1,7 @@
 # Apache Cassandra Installation Manual
 
+This section outlines the process of installing Cassandra on a Linux instance, whether it's on Windows Subsystem for Linux (WSL) or a conventional Linux distribution.
+
 # Table of Contents
 
 1. [Prerequisites](#prerequisites)
