@@ -4,12 +4,13 @@ This section provides an overview of the steps for configuring Cassandra on a Li
 
 # Table of Contents
 
-1. [Overview](#)
-2. [Main runtime properties](#)
-3. [Changing the location of directories](#)
-4. [Environment variables](#)
-5. [Logging](#)
-6. [IP addresses](#)
+1. [Overview](#overview)
+2. [Main runtime properties](#main-runtime-properties)
+3. [Changing the location of directories](#changing-the-location-of-directories)
+4. [Cassandra directories on WSL](#cassandra-directories-on-wsl)
+5. [Environment variables](#environment-variables)
+6. [Logging](#logging)
+7. [IP addresses](#ip-addresses)
 
 # Overview
 
@@ -51,6 +52,12 @@ The following yaml properties control the location of directories:
 * **`hints_directory`**: The directory where **`hints`** are located.
 
 For performance reasons, if you have multiple disks, consider putting commitlog and data files on different disks.
+
+# Cassandra directories on WSL
+
+When running Cassandra on Windows Subsystem for Linux (WSL), it's important to reconfigure Cassandra to utilize Windows directories for improved ease of use and performance.
+
+To access drive **`C:`** on a Windows file system within WSL, you must use the **`/mnt/c/`** file path.
 
 # Environment variables
 
