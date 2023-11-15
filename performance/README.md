@@ -10,6 +10,8 @@ The **`cassandra-stress`** tool was used to benchmark and load-test a Cassandra 
 
 The primary metric for all tests is the **`Row rate`**, which represents the number of rows that can be stored or read per second.
 
+Each test can be compared against any other test conducted on the same machine. Comparisons against tests on different machines are feasible when the hardware configurations are identical.
+
 # Testing Environments
 
 Tests were conducted on a range of machines with variations in operating systems and hardware configurations.
@@ -25,6 +27,10 @@ Tests were conducted on a range of machines with variations in operating systems
 * Linux
     - **`OS`**:
     - **`Processor`**: Intel(R) Xeon(R) CPU E5-2620 v3 @ 2.40GHz   2.40 GHz
+    - **`Installed RAM`**:
+* Server 2
+    - **`OS`**:
+    - **`Processor`**:
     - **`Installed RAM`**:
 
 # Testing Conditions
@@ -55,7 +61,7 @@ cassandra-stress mixed n=500000000 -node <ip> -rate threads=16
 
 | Deployment          | Write (row/s) | Read (row/s) | Mixed (row/s) |
 | ------------------- | ------------- | ------------ | ------------- |
-| Windows             | 11 183        | 11 477       | 53 323        |
+| Windows             | 11 183        | 11 477       | 11 582        |
 | WSL                 | 60 263        | 54 503       | 53 323        |
 | WSL (windows drive) | 66 391        | 63 318       | 57 593        |
 | Docker              | -             | -            | -             |
@@ -64,17 +70,23 @@ cassandra-stress mixed n=500000000 -node <ip> -rate threads=16
 
 | Deployment          | Write (row/s) | Read (row/s) | Mixed (row/s) |
 | ------------------- | ------------- | ------------ | ------------- |
-| Windows             | -             | -            | -             |
-| WSL                 | -             | -            | -             |
-| WSL (windows drive) | -             | -            | -             |
-| Ubuntu              | -             | -            | -             |
-| Docker              | -             | -            | -             |
+| Windows             | 4 950         | 4 623        | 4 630         |
+| Ubuntu              | 9 710         | 8 888        | 8 797         |
 
 # Testing Results for Linux
 
 | Deployment          | Write (row/s) | Read (row/s) | Mixed (row/s) |
 | ------------------- | ------------- | ------------ | ------------- |
-| Ubuntu              | -             | -            | -             |
+| Ubuntu              | 9 710         | 8 888        | 8 797         |
+| Docker              | -             | -            | -             |
+
+# Testing Results for Server 2
+
+| Deployment          | Write (row/s) | Read (row/s) | Mixed (row/s) |
+| ------------------- | ------------- | ------------ | ------------- |
+| Windows             | -             | -            | -             |
+| WSL                 | -             | -            | -             |
+| WSL (windows drive) | -             | -            | -             |
 | Docker              | -             | -            | -             |
 
 # Observations

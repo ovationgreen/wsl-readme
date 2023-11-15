@@ -7,12 +7,13 @@ This section outlines the process of installing Cassandra on a Linux instance, w
 1. [Prerequisites](#prerequisites)
 2. [Update Your System](#update-your-system)
 3. [Install Java](#install-java)
-4. [Add the Cassandra Repository (Debian/Ubuntu only)](#add-the-cassandra-repository-debianubuntu-only)
-5. [Install Apache Cassandra](#install-apache-cassandra)
-6. [Start and Enable Cassandra Service](#start-and-enable-cassandra-service)
-7. [Verify Cassandra Installation](#verify-cassandra-installation)
-8. [Cassandra Folder Structure](#cassandra-folder-structure)
-9. [Configuration and Further Steps](#configuration-and-further-steps)
+4. [Install CURL](#install-curl)
+5. [Add the Cassandra Repository (Debian/Ubuntu only)](#add-the-cassandra-repository-debianubuntu-only)
+6. [Install Apache Cassandra](#install-apache-cassandra)
+7. [Start and Enable Cassandra Service](#start-and-enable-cassandra-service)
+8. [Verify Cassandra Installation](#verify-cassandra-installation)
+9. [Cassandra Folder Structure](#cassandra-folder-structure)
+10. [Configuration and Further Steps](#configuration-and-further-steps)
 
 # Prerequisites
 
@@ -49,6 +50,16 @@ For Red Hat/CentOS:
 
 ```bash
 sudo yum install java-1.8.0-openjdk
+```
+
+# Install CURL
+
+The **`curl`** tool will be utilized in the next steps.
+
+For Debian/Ubuntu:
+
+```bash
+sudo apt install curl
 ```
 
 # Add the Cassandra Repository (Debian/Ubuntu only)
