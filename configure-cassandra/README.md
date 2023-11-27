@@ -11,6 +11,7 @@ This section provides an overview of the steps for configuring Cassandra on a Li
 5. [Environment variables](#environment-variables)
 6. [Logging](#logging)
 7. [IP addresses](#ip-addresses)
+8. [Properties](#properties)
 
 # Overview
 
@@ -86,3 +87,14 @@ The found external IP address must be specified in the following properties with
 * **`seeds`**: Cassandra nodes use this list of hosts to find each other and learn the topology of the ring.
 * **`listen_address`**: Address or interface to bind to and tell other Cassandra nodes to connect to.
 * **`rpc_address`**: The address or interface to bind the Thrift RPC service and native transport server to.
+
+# Properties
+
+The following properties, which are related to buffer sizes and timeouts, should have their values increased if they are currently set lower:
+* **`commitlog_segment_size_in_mb`**: `64` (`32` by default)
+* **`read_request_timeout_in_ms`**: `60000` (`5000` by default)
+* **`write_request_timeout_in_ms`**: `20000` (`2000` by default)
+* **`enable_user_defined_functions`**: `true` (`false` by default)
+* **`enable_scripted_user_defined_functions`**: `true` (`false` by default)
+* **`batch_size_warn_threshold_in_kb`**: `5000` (`5` by default)
+* **`batch_size_fail_threshold_in_kb`**: `500000` (`50` by default)
