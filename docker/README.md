@@ -6,7 +6,7 @@ Docker is an open platform for developing, shipping, and running applications. D
 
 The purpose of this document is to guide users through the installation process of Docker on a Windows Server environment. This guide aims to provide clear and step-by-step instructions to help users install Docker on their Windows Server, ensuring a smooth and successful setup.
 
-This document primarily concentrates on setting up Docker in a Windows Server environment. For Windows 10/11 and advanced steps, please refer to the [official documentation](https://learn.microsoft.com/en-us/virtualization/windowscontainers/quick-start/set-up-environment?tabs=dockerce).
+This document primarily concentrates on setting up Docker Desktop in a Windows Server environment. For instructions on how to install and configure containers on a Windows Server, please refer to the [official documentation](https://learn.microsoft.com/en-us/virtualization/windowscontainers/quick-start/set-up-environment?tabs=dockerce).
 
 # Table of Contents
 
@@ -15,20 +15,19 @@ This document primarily concentrates on setting up Docker in a Windows Server en
 
 # Installing
 
-Docker Community Edition (CE) provides a standard runtime environment for containers with a common API and command-line interface (CLI). It is managed by the open source community as part of the [Moby Project](https://mobyproject.org).
+Begin by downloading [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop). Throughout the installation, select the `WSL2` option, and proceed with the installation. You'll be prompted to log out during the install process; please log out and then log in again.
 
-To get started with Docker on Windows Server Miscrosoft has created [a powershell script](https://raw.githubusercontent.com/microsoft/Windows-Containers/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1) which configures your environment to enable container-related OS features and install the Docker runtime.
+# Start Docker Desktop
 
-```PowerShell
-Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/microsoft/Windows-Containers/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1" -o install-docker-ce.ps1
-.\install-docker-ce.ps1
-```
+Docker Desktop does not start automatically after installation. To start Docker Desktop:
 
-During the installation process, the system will reboot automatically and resume the installation process afterward.
-
-For more configuration details, see [Docker Engine on Windows](https://learn.microsoft.com/en-us/virtualization/windowscontainers/manage-docker/configure-docker-daemon).
+1. Search for Docker, and select **Docker Desktop** in the search results.
+2. The Docker menu ( whale menu ) displays the Docker Subscription Service Agreement.
+3. Select **Accept** to continue. Docker Desktop starts after you accept the terms.
 
 # Links
 
 * [Docker](https://www.docker.com)
+* [Docker Desktop](https://www.docker.com/products/docker-desktop)
+* [Install Docker Desktop on Windows](https://docs.docker.com/desktop/install/windows-install)
 * [Containers on Windows](https://learn.microsoft.com/en-us/virtualization/windowscontainers)

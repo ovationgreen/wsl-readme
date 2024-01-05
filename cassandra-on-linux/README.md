@@ -94,6 +94,8 @@ For Debian/Ubuntu (after adding the repository):
 
 ```bash
 sudo apt update
+```
+```bash
 sudo apt install cassandra
 ```
 
