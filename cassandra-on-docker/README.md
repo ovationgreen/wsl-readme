@@ -6,7 +6,8 @@ This section delineates the process of installing Cassandra on a Docker instance
 
 1. [Prerequisites](#prerequisites)
 2. [Get Cassandra using Docker](#get-cassandra-using-docker)
-3. [Links](#links)
+3. [Start Cassandra](#start-cassandra)
+4. [Links](#links)
 
 # Prerequisites
 
@@ -28,7 +29,19 @@ docker pull cassandra:latest
 
 All available Cassandra images can be found on the [official Cassandra Images page](https://hub.docker.com/_/cassandra).
 
-# 
+# Start Cassandra
+
+Inside Docker Desktop, navigate to the **Images** section, and click the **Run** button.
+
+A **Run a new container** dialog will appear with an **Optional settings** section. Expand the **Optional settings** section and enter an appropriate container name. Ensure that host ports are entered the same as the default values.
+
+In the **Volumes** section, select the **Host path** option to determine the location of Cassandra's database on the Windows machine. In the corresponding **Container path**, enter the following value:
+
+```
+/var/lib/cassandra
+```
+
+Click the **`Run`** button to generate a container from the image. The new container will now be accessible in the **Containers** section within Docker Desktop.
 
 # Links
 
