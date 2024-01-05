@@ -64,7 +64,7 @@ cassandra-stress mixed n=500000000 -node <ip> -rate threads=16
 | Windows             | 11 183        | 11 477       | 11 582        |
 | WSL                 | 60 263        | 54 503       | 53 323        |
 | WSL (windows drive) | 66 391        | 63 318       | 57 593        |
-| Docker              | -             | -            | -             |
+| Docker              | 21 847        | 21 139       | 20 776        |
 
 # Testing Results for Server
 
@@ -96,4 +96,4 @@ During the test executions, the following observations were noted:
 
 2. Cassandra on Windows Subsystem for Linux (WSL) exhibits improved performance when configured to utilize a Windows drive.
 
-3. Running Cassandra inside a Docker container can limit performance by a factor of 4.
+3. Running Cassandra inside a Docker container can limit performance by a factor that varies between 3 to 4.
