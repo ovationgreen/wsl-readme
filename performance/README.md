@@ -29,9 +29,9 @@ Tests were conducted on a range of machines with variations in operating systems
     - **`Processor`**: Intel(R) Xeon(R) CPU E5-2620 v3 @ 2.40GHz   2.40 GHz
     - **`Installed RAM`**:
 * Server 2
-    - **`OS`**:
-    - **`Processor`**:
-    - **`Installed RAM`**:
+    - **`OS`**: Windows Server 2022 Standard 21H2
+    - **`Processor`**: Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz   2.60 GHz  (4 processors)
+    - **`Installed RAM`**: 16.0 GB
 
 # Testing Conditions
 
@@ -84,10 +84,9 @@ cassandra-stress mixed n=500000000 -node <ip> -rate threads=16
 
 | Deployment          | Write (row/s) | Read (row/s) | Mixed (row/s) |
 | ------------------- | ------------- | ------------ | ------------- |
-| Windows             | -             | -            | -             |
-| WSL                 | -             | -            | -             |
-| WSL (windows drive) | -             | -            | -             |
-| Docker              | -             | -            | -             |
+| Windows             | 14 989        | 11 230       | 10 453        |
+| WSL (windows drive) | 14 461        | 15 384       | 12 635        |
+| Docker              | 4 126         | 4 074        | 3 094         |
 
 # Observations
 
@@ -96,3 +95,5 @@ During the test executions, the following observations were noted:
 1. Cassandra on a Linux environment demonstrates significantly improved performance compared to a pure Windows installation. However, it's important to note that the CPU load is also proportionally higher in the Linux environment.
 
 2. Cassandra on Windows Subsystem for Linux (WSL) exhibits improved performance when configured to utilize a Windows drive.
+
+3. Running Cassandra inside a Docker container can limit performance by a factor of 4.
