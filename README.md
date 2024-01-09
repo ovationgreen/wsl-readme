@@ -11,9 +11,10 @@ Starting from version 4.0, Cassandra necessitates a Linux environment for its op
 1. [Installing Windows Subsystem for Linux](wsl/README.md)
 2. [Installing Cassandra on Linux](cassandra-on-linux/README.md)
 3. [Configuring Cassandra](configure-cassandra/README.md)
-4. [Performance Comparison](performance/README.md)
+4. [Configuring Cassandra on WSL](cassandra-on-wsl/README.md)
 5. [Installing Docker](docker/README.md)
 6. [Installing Cassandra on Docker](cassandra-on-docker/README.md)
+7. [Performance Comparison](performance/README.md)
 
 # Contributing
 
