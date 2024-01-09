@@ -41,12 +41,19 @@ netsh interface portproxy add v4tov4 listenport=9042 listenaddress=0.0.0.0 conne
 netsh interface portproxy add v4tov4 listenport=9160 listenaddress=0.0.0.0 connectport=9160 connectaddress=172.27.16.245
 ```
 
+All used ports (`7000`, `7001`, `7199`, `9042`, `9160`) must be added to the firewall's rules to allow both inbound and outbound connections.
+
 To obtain the IP address, use:
 * `wsl hostname -I` for the IP address of your Linux distribution installed via WSL 2 (the WSL 2 VM address)
 * `cat /etc/resolv.conf` for the IP address of the Windows machine as seen from WSL 2 (the WSL 2 VM)
 * `ip route show | grep -i default | awk '{ print $3}'` for the IP address of your host machine
 
 Using `listenaddress=0.0.0.0` will listen on all [IPv4 ports](https://stackoverflow.com/questions/9987409/want-to-know-what-is-ipv4-and-ipv6#:%7E:text=The%20basic%20difference%20is%20the,whereas%20IPv6%20has%20128%20bits.).
+
+The folowing properties defined the listened IP interfaces and must be changed:
+* `seeds`: set to the remote IP address of the target machine accessible through the LAN.
+* `listen_address`: set to the local WSL IP address.
+* `rpc_address`: TBD.
 
 # WSL and firewall
 
