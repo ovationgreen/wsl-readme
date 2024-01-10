@@ -8,11 +8,6 @@ The purpose of this document is to guide users through the installation process 
 
 This document primarily concentrates on setting up Docker Desktop in a Windows Server environment. For instructions on how to install and configure containers on a Windows Server, please refer to the [official documentation](https://learn.microsoft.com/en-us/virtualization/windowscontainers/quick-start/set-up-environment?tabs=dockerce).
 
-# Table of Contents
-
-1. [Installing](#installing)
-2. [Links](#links)
-
 # Installing
 
 Begin by downloading [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop). Throughout the installation, select the `WSL2` option, and proceed with the installation. You'll be prompted to log out during the install process; please log out and then log in again.
