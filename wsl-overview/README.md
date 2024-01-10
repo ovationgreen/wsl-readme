@@ -19,7 +19,7 @@ You must be running Windows 10 version 2004 and higher (Build 19041 and higher) 
 
 # Windows Subsystem for Linux (WSL)
 
-The Windows Subsystem for Linux (WSL) enables us to run a GNU/Linux environment, complete with a wide range of command-line tools, utilities, and applications, directly on Windows. By using WSL, we eliminate the need for a full-fledged Linux distribution for Cassandra 4.x and maintain the management of Cassandra's database files on the Windows platform.
+The Windows Subsystem for Linux (WSL) enables us to run a GNU/Linux environment, complete with a wide range of command-line tools, utilities, and applications, directly on Windows. By using WSL, we eliminate the need for a full-fledged Linux distribution for Cassandra 4.x and can maintain the management of Cassandra's database files on the Windows platform.
 
 # WSL distro
 

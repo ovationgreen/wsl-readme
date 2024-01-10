@@ -91,6 +91,7 @@ The found external IP address must be specified in the following properties with
 # Properties
 
 The following properties, which are related to buffer sizes and timeouts, should have their values increased if they are currently set lower:
+* **`num_tokens`**: `256` (`16` by default)
 * **`commitlog_segment_size_in_mb`**: `64` (`32` by default)
 * **`read_request_timeout_in_ms`**: `60000` (`5000` by default)
 * **`write_request_timeout_in_ms`**: `20000` (`2000` by default)
