@@ -8,7 +8,7 @@ The purpose of this document is to provide guidance for setting up a new WSL ins
 
 # Overview
 
-The Windows Subsystem for Linux (WSL) enables you to run a GNU/Linux environment, complete with a wide range of command-line tools, utilities, and applications, directly on Windows. This can be accomplished without making any modifications to the Linux environment, and it avoids the resource overhead associated with traditional virtual machines or dual-boot configurations.
+The Windows Subsystem for Linux (WSL) enables us to run a GNU/Linux environment, complete with a wide range of command-line tools, utilities, and applications, directly on Windows. This can be accomplished without making any modifications to the Linux environment, and it avoids the resource overhead associated with traditional virtual machines or dual-boot configurations.
 
 # Table of Contents
 
@@ -26,7 +26,7 @@ The Windows Subsystem for Linux (WSL) enables you to run a GNU/Linux environment
 You must be running Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11 to use the commands below. If you are on earlier versions please see [the manual install page](https://learn.microsoft.com/en-us/windows/wsl/install-manual). 
 
 * The virtualization thechnology must be enabled in the computer's BIOS settings.
-* Install Hyper-V by following the steps outlined in the official documentation for  [Windows](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) and [Windows Server](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server)
+* Install Hyper-V by following the steps outlined in the official documentation for [Windows](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) and [Windows Server](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server)
 
 # WSL installation
 

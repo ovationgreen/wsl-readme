@@ -17,7 +17,7 @@ The following properties in the YAML configuration file must be changed to refer
 
 # Accessing Cassandra from Windows (localhost)
 
-If you are running Cassandra on , you can access it from a Windows app (like your Edge or Chrome internet browser) using localhost (just like you normally would).
+If you are running Cassandra on the same machine as Ovation Green, you can access it from a Windows using localhost (just like you normally would).
 
 # Accessing Cassandra on WSL from the local area network (LAN)
 
@@ -54,6 +54,8 @@ The folowing properties defined the listened IP interfaces and must be changed:
 * `seeds`: set to the remote IP address of the target machine accessible through the LAN.
 * `listen_address`: set to the local WSL IP address.
 * `rpc_address`: TBD.
+
+In the event that Cassandra is not accessible from the LAN after configuring port proxy, it is recommended to restart the Cassandra service on WSL.
 
 # WSL and firewall
 

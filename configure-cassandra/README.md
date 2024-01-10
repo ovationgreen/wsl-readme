@@ -98,3 +98,4 @@ The following properties, which are related to buffer sizes and timeouts, should
 * **`enable_scripted_user_defined_functions`**: `true` (`false` by default)
 * **`batch_size_warn_threshold_in_kb`**: `5000` (`5` by default)
 * **`batch_size_fail_threshold_in_kb`**: `500000` (`50` by default)
+* **`materialized_views_enabled`**: `true` (`false` by default)
