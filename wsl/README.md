@@ -59,7 +59,7 @@ If you run into an issue during the install process, check the [installation sec
 
 Once the process of installing your Linux distribution with WSL is complete, open the distribution (Ubuntu by default) using the Start menu. You will be asked to create a User Name and Password for your Linux distribution.
 
-* Unless requested differently, the username should be set to **`miscout.`**
+* Unless requested differently, the username should be set to **`miscout`**.
 * The password for the **`miscout`** user should be set as the default password of the **`SA`** database user.
 
 # Update WSL
