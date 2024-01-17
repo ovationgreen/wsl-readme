@@ -40,7 +40,7 @@ For a more concise version of the installation procedure, the following steps ar
 You can now install everything you need to run WSL with a single command. Open PowerShell or Windows Command Prompt in **`administrator`** mode by right-clicking and selecting "Run as administrator", enter the wsl --install command, then restart your machine.
 
 ```powershell
-wsl --install
+wsl --install -d Ubuntu
 ```
 
 Following a successful installation, it's necessary to reboot your system to ensure that the changes take effect. After rebooting, you should expect a Windows Command Prompt to automatically appear and proceed with the installation of the Ubuntu distribution. If the automatic installation didn't occur or if you prefer a different Linux distribution, please proceed to the next step to manually install your preferred Linux distribution.
@@ -145,6 +145,12 @@ In a `cmd` window, run the following command to restart WSL:
 
 ```powershell
 wsl --shutdown
+```
+
+And finally, if you have a Cisco AnyConnect VPN, run the following command in the Windows PowerShell terminal:
+
+```powershell
+Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "Cisco AnyConnect"} | Set-NetIPInterface -InterfaceMetric 6000
 ```
 
 # Configuring WSL firewall rules
