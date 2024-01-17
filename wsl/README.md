@@ -74,6 +74,12 @@ Options include:
 
 * **`--web-download`**: Download the latest update from the GitHub rather than the Microsoft Store.
 
+This change will take effect on the next full restart of WSL. To force a restart, please run:
+
+```powershell
+wsl --shutdown
+```
+
 # Configuring DNS
 
 If DNS is not working on WSL, please follow these simple instructions.
