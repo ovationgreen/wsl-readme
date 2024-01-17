@@ -126,8 +126,11 @@ To get a list of available DNS servers, run the next command in a `cmd` window, 
 ipconfig /all
 ```
 
-The file can be modified by executing the following command:
+The file can be modified by executing the following commands:
 
+```bash
+sudo rm /etc/resolv.conf
+```
 ```bash
 echo -e "nameserver 8.8.8.8\n" | sudo tee /etc/resolv.conf
 ```
