@@ -91,6 +91,17 @@ The found external IP address must be specified in the following properties with
 # Properties
 
 The following properties, which are related to buffer sizes and timeouts, should have their values increased if they are currently set lower:
+
+* **`num_tokens`**: `256` (`16` by default)
+* **`commitlog_segment_size`**: `64MiB` (`32MiB` by default)
+* **`read_request_timeout`**: `60000ms` (`5000ms` by default)
+* **`write_request_timeout`**: `20000ms` (`2000ms` by default)
+* **`batch_size_warn_threshold`**: `5000KiB` (`5KiB` by default)
+* **`batch_size_fail_threshold`**: `500000KiB` (`50KiB` by default)
+* **`materialized_views_enabled`**: `true` (`false` by default)
+
+~~For Cassandra 3.x and 4.0~~:
+
 * **`num_tokens`**: `256` (`16` by default)
 * **`commitlog_segment_size_in_mb`**: `64` (`32` by default)
 * **`read_request_timeout_in_ms`**: `60000` (`5000` by default)

@@ -68,16 +68,16 @@ If you are using Debian/Ubuntu, you need to add the Apache Cassandra repository.
 
 Create a Cassandra sources list file:
 
-Cassandra 3.11:
-
-```bash
-echo "deb https://debian.cassandra.apache.org 311x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
-```
-
 Cassandra 4.1:
 
 ```bash
 echo "deb https://debian.cassandra.apache.org 41x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
+```
+
+~~Cassandra 3.11:~~
+
+```bash
+echo "deb https://debian.cassandra.apache.org 311x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
 ```
 
 Add the Apache Cassandra repository's GPG key:

@@ -101,7 +101,7 @@ Create or edit the file **`/etc/wsl.conf`** and add the following lines to the f
 systemd=true
 
 [network]
-generateResolvConf = false
+generateResolvConf=false
 ```
 
 This can be accomplished by executing the following command:
@@ -152,6 +152,8 @@ And finally, if you have a Cisco AnyConnect VPN, run the following command in th
 ```powershell
 Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "Cisco AnyConnect"} | Set-NetIPInterface -InterfaceMetric 6000
 ```
+
+Restart WSL on the same elevated powershell, then you can open up wsl2 and it should connect to the internet.
 
 # Configuring WSL firewall rules
 
