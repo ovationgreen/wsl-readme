@@ -18,8 +18,8 @@ The Windows Subsystem for Linux (WSL) enables us to run a GNU/Linux environment,
 4. [Change the default Linux distribution installed](#change-the-default-linux-distribution-installed)
 5. [Set up Linux username and password](#set-up-linux-username-and-password)
 6. [Update WSL](#update-wsl)
-6. [Configuring DNS](#configuring-dns)
-7. [Update and upgrade packages](#update-and-upgrade-packages)
+6. [Update and upgrade packages](#update-and-upgrade-packages)
+7. [Configuring DNS](#configuring-dns)
 8. [Configuring WSL firewall rules](#configuring-wsl-firewall-rules)
 
 # Prerequisites
@@ -80,35 +80,6 @@ This change will take effect on the next full restart of WSL. To force a restart
 wsl --shutdown
 ```
 
-# Configuring DNS
-
-If DNS is not working on WSL, please follow these simple instructions.
-
-Create or edit the following file: **`/etc/wsl.conf`**.
-
-Add the following lines to the file to ensure that your DNS changes do not get overwritten:
-
-```
-[network]
-generateResolvConf = false
-```
-
-In a cmd window, **`run wsl --shutdown`** and restart WSL2.
-
-Create a file: **`/etc/resolv.conf`**. If it exists, replace existing one with this new file.
-
-Put the following line in the file:
-
-```
-nameserver 8.8.8.8 # Or use your DNS server instead of 8.8.8.8 which is a Google DNS server
-```
-
-Run the following command to make your changes permanent.
-
-```bash
-sudo chattr +i /etc/resolv.conf
-```
-
 # Update and upgrade packages
 
 It is recommended to regularly update and upgrade packages using the preferred package manager for your distribution. For Ubuntu or Debian, you can use the following command:
@@ -118,6 +89,60 @@ sudo apt update && sudo apt upgrade
 ```
 
 Windows does not automatically update or upgrade the Linux distribution(s). Users must take control of this task and manage updates and upgrades manually.
+
+# Configuring DNS
+
+If DNS is not working on WSL, please follow these simple instructions.
+
+Create or edit the file **`/etc/wsl.conf`** and add the following lines to the file to ensure that your DNS changes do not get overwritten:
+
+```
+[boot]
+systemd=true
+
+[network]
+generateResolvConf = false
+```
+
+This can be accomplished by executing the following command:
+
+```bash
+echo -e "\n[boot]\nsystemd=true\n\n[network]\ngenerateResolvConf=false\n" | sudo tee /etc/wsl.conf
+```
+
+Create a file **`/etc/resolv.conf`**. If it exists, replace existing one with this new file.
+
+Put the following line in the file:
+
+```
+nameserver 8.8.8.8
+```
+
+Please not that you have to use your DNS server instead of `8.8.8.8`, which is a Google DNS server.
+
+To get a list of available DNS servers, run the next command in a `cmd` window, and look for **DNS Servers**.
+
+```powershell
+ipconfig /all
+```
+
+The file can be modified by executing the following command:
+
+```bash
+echo -e "nameserver 8.8.8.8\n" | sudo tee /etc/resolv.conf
+```
+
+Run the following command to make your changes permanent.
+
+```bash
+sudo chattr +i /etc/resolv.conf
+```
+
+In a `cmd` window, run the following command to restart WSL:
+
+```powershell
+wsl --shutdown
+```
 
 # Configuring WSL firewall rules
 
