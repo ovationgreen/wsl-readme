@@ -18,9 +18,9 @@ The Windows Subsystem for Linux (WSL) enables us to run a GNU/Linux environment,
 4. [Change the default Linux distribution installed](#change-the-default-linux-distribution-installed)
 5. [Set up Linux username and password](#set-up-linux-username-and-password)
 6. [Update WSL](#update-wsl)
-6. [Update and upgrade packages](#update-and-upgrade-packages)
 7. [Configuring DNS](#configuring-dns)
-8. [Configuring WSL firewall rules](#configuring-wsl-firewall-rules)
+8. [Update and upgrade packages](#update-and-upgrade-packages)
+9. [Configuring WSL firewall rules](#configuring-wsl-firewall-rules)
 
 # Prerequisites
 
@@ -79,16 +79,6 @@ This change will take effect on the next full restart of WSL. To force a restart
 ```powershell
 wsl --shutdown
 ```
-
-# Update and upgrade packages
-
-It is recommended to regularly update and upgrade packages using the preferred package manager for your distribution. For Ubuntu or Debian, you can use the following command:
-
-```bash
-sudo apt update && sudo apt upgrade -y
-```
-
-Windows does not automatically update or upgrade the Linux distribution(s). Users must take control of this task and manage updates and upgrades manually.
 
 # Configuring DNS
 
@@ -154,6 +144,16 @@ Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "Cisco AnyConnect"
 ```
 
 Restart WSL on the same elevated powershell, then you can open up wsl2 and it should connect to the internet.
+
+# Update and upgrade packages
+
+It is recommended to regularly update and upgrade packages using the preferred package manager for your distribution. For Ubuntu or Debian, you can use the following command:
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+Windows does not automatically update or upgrade the Linux distribution(s). Users must take control of this task and manage updates and upgrades manually.
 
 # Configuring WSL firewall rules
 
