@@ -85,7 +85,7 @@ wsl --shutdown
 It is recommended to regularly update and upgrade packages using the preferred package manager for your distribution. For Ubuntu or Debian, you can use the following command:
 
 ```bash
-sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade -y
 ```
 
 Windows does not automatically update or upgrade the Linux distribution(s). Users must take control of this task and manage updates and upgrades manually.
