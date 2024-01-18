@@ -43,7 +43,7 @@ sudo yum update
 Apache Cassandra requires Java to run. You can install OpenJDK or Oracle Java. Here's an example of how to install OpenJDK 8:
 
 ```bash
-sudo apt install openjdk-8-jre
+sudo apt install openjdk-8-jre -y
 ```
 
 For Red Hat/CentOS:
@@ -96,7 +96,7 @@ For Debian/Ubuntu (after adding the repository):
 sudo apt update
 ```
 ```bash
-sudo apt install cassandra
+sudo apt install cassandra -y
 ```
 
 For Red Hat/CentOS:
