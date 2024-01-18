@@ -92,6 +92,7 @@ The found external IP address must be specified in the following properties with
 
 The following properties, which are related to buffer sizes and timeouts, should have their values increased if they are currently set lower:
 
+* **`cluster_name`**: `Mita-Teknik` (`Test Cluster` by default)
 * **`num_tokens`**: `256` (`16` by default)
 * **`commitlog_segment_size`**: `64MiB` (`32MiB` by default)
 * **`read_request_timeout`**: `60000ms` (`5000ms` by default)
@@ -102,6 +103,7 @@ The following properties, which are related to buffer sizes and timeouts, should
 
 ~~For Cassandra 3.x and 4.0~~:
 
+* **`cluster_name`**: `Mita-Teknik` (`Test Cluster` by default)
 * **`num_tokens`**: `256` (`16` by default)
 * **`commitlog_segment_size_in_mb`**: `64` (`32` by default)
 * **`read_request_timeout_in_ms`**: `60000` (`5000` by default)
