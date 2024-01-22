@@ -12,7 +12,7 @@ Starting now, Cassandra will no longer be included in the Ovation Green installa
 
 # Prerequisites
 
-You must be running Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11 or Windows Server 2022 and higher.
+You must be running Windows 10 (Build 22H2 and higher) or Windows 11 (Build 22H2 and higher) or Windows Server 2022 and higher.
 * The virtualization thechnology must be enabled in the computer's BIOS settings.
 * In the case of a virtual machine, nested virtualization must be enabled.
 * Microsoft Hyper-V must be installed.

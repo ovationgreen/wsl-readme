@@ -25,7 +25,7 @@ The Windows Subsystem for Linux (WSL) enables us to run a GNU/Linux environment,
 
 # Prerequisites
 
-You must be running Windows 10 (Build 22H2 and higher) or Windows 11 (Build 22H2 and higher) to use the commands below. If you are on earlier versions please see [the manual install page](https://learn.microsoft.com/en-us/windows/wsl/install-manual). 
+You must be running Windows 10 (Build 22H2 and higher) or Windows 11 (Build 22H2 and higher) or Windows Server 2022 and higher to use the commands below. If you are on earlier versions please see [the manual install page](https://learn.microsoft.com/en-us/windows/wsl/install-manual). 
 
 * The virtualization thechnology must be enabled in the computer's BIOS settings.
 * Install Hyper-V by following the steps outlined in the official documentation for [Windows](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) and [Windows Server](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server)
@@ -83,7 +83,7 @@ wsl --shutdown
 
 # Supported WSL versions
 
-WSL is required to be version `2.0.15` or higher.
+WSL is required to be version `2.0.14` or higher.
 
 To check which version of WSL is installed, run the following command:
 
