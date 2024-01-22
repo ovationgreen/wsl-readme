@@ -18,13 +18,14 @@ The Windows Subsystem for Linux (WSL) enables us to run a GNU/Linux environment,
 4. [Change the default Linux distribution installed](#change-the-default-linux-distribution-installed)
 5. [Set up Linux username and password](#set-up-linux-username-and-password)
 6. [Update WSL](#update-wsl)
-7. [Configuring DNS](#configuring-dns)
-8. [Update and upgrade packages](#update-and-upgrade-packages)
-9. [Configuring WSL firewall rules](#configuring-wsl-firewall-rules)
+7. [Supported WSL versions](#supported-wsl-versions)
+8. [Configuring DNS](#configuring-dns)
+9. [Update and upgrade packages](#update-and-upgrade-packages)
+10. [Configuring WSL firewall rules](#configuring-wsl-firewall-rules)
 
 # Prerequisites
 
-You must be running Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11 to use the commands below. If you are on earlier versions please see [the manual install page](https://learn.microsoft.com/en-us/windows/wsl/install-manual). 
+You must be running Windows 10 (Build 22H2 and higher) or Windows 11 (Build 22H2 and higher) to use the commands below. If you are on earlier versions please see [the manual install page](https://learn.microsoft.com/en-us/windows/wsl/install-manual). 
 
 * The virtualization thechnology must be enabled in the computer's BIOS settings.
 * Install Hyper-V by following the steps outlined in the official documentation for [Windows](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) and [Windows Server](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server)
@@ -67,7 +68,7 @@ Once the process of installing your Linux distribution with WSL is complete, ope
 Windows Subsystem for Linux (WSL) can be updated through the Windows Update feature. To manually update your WSL version to the latest one, you can use the following command:
 
 ```powershell
-wsl --update
+wsl --update --web-download
 ```
 
 Options include:
@@ -80,13 +81,25 @@ This change will take effect on the next full restart of WSL. To force a restart
 wsl --shutdown
 ```
 
+# Supported WSL versions
+
+WSL is required to be version `2.0.15` or higher.
+
+To check which version of WSL is installed, run the following command:
+
+```powershell
+wsl --version
+```
+
+If the command doesn't output correct versions, it means that an outdated version of WSL is installed. To install a newer WSL version, you might have to update your OS.
+
 # Configuring DNS
 
 If DNS is not working on WSL, please follow these simple instructions.
 
 Create or edit the file **`/etc/wsl.conf`** and add the following lines to the file to ensure that your DNS changes do not get overwritten:
 
-```
+```conf
 [boot]
 systemd=true
 

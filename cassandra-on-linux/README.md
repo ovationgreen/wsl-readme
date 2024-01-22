@@ -133,6 +133,14 @@ For Red Hat/CentOS:
 sudo systemctl enable cassandra
 ```
 
+On WSL, if the Cassandra service doesn't start automatically, for instance, due to an older version of WSL, you will need to modify the boot section of the `/etc/wsl.conf` file by adding the command that starts the service.
+
+```conf
+[boot]
+systemd=true
+command="service cassandra start"
+```
+
 # Verify Cassandra Installation
 
 You can verify that Cassandra is running by using the **`nodetool`** command:
