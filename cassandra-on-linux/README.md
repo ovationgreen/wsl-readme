@@ -32,7 +32,7 @@ For Debian/Ubuntu:
 sudo apt update
 ```
 
-For Red Hat/CentOS:
+~~For Red Hat/CentOS:~~
 
 ```bash
 sudo yum update
@@ -46,7 +46,7 @@ Apache Cassandra requires Java to run. You can install OpenJDK or Oracle Java. H
 sudo apt install openjdk-8-jre -y
 ```
 
-For Red Hat/CentOS:
+~~For Red Hat/CentOS:~~
 
 ```bash
 sudo yum install java-1.8.0-openjdk
@@ -99,7 +99,7 @@ sudo apt update
 sudo apt install cassandra -y
 ```
 
-For Red Hat/CentOS:
+~~For Red Hat/CentOS:~~
 
 ```bash
 sudo yum install cassandra
@@ -113,7 +113,7 @@ For Debian/Ubuntu:
 sudo service cassandra start
 ```
 
-For Red Hat/CentOS:
+~~For Red Hat/CentOS:~~
 
 ```bash
 sudo systemctl start cassandra
@@ -127,7 +127,7 @@ For Debian/Ubuntu:
 sudo update-rc.d cassandra defaults
 ```
 
-For Red Hat/CentOS:
+~~For Red Hat/CentOS:~~
 
 ```bash
 sudo systemctl enable cassandra
