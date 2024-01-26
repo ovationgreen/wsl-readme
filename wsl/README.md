@@ -15,13 +15,14 @@ The Windows Subsystem for Linux (WSL) enables us to run a GNU/Linux environment,
 1. [Prerequisites](#prerequisites)
 2. [WSL installation](#wsl-installation)
 3. [Install WSL command](#install-wsl-command)
-4. [Change the default Linux distribution installed](#change-the-default-linux-distribution-installed)
-5. [Set up Linux username and password](#set-up-linux-username-and-password)
-6. [Update WSL](#update-wsl)
-7. [Supported WSL versions](#supported-wsl-versions)
-8. [Configuring DNS](#configuring-dns)
-9. [Update and upgrade packages](#update-and-upgrade-packages)
-10. [Configuring WSL firewall rules](#configuring-wsl-firewall-rules)
+4. [WSL shell](#wsl-shell)
+5. [Change the default Linux distribution installed](#change-the-default-linux-distribution-installed)
+6. [Set up Linux username and password](#set-up-linux-username-and-password)
+7. [Update WSL](#update-wsl)
+8. [Supported WSL versions](#supported-wsl-versions)
+9. [Configuring DNS](#configuring-dns)
+10. [Update and upgrade packages](#update-and-upgrade-packages)
+11. [Configuring WSL firewall rules](#configuring-wsl-firewall-rules)
 
 # Prerequisites
 
@@ -38,7 +39,7 @@ For a more concise version of the installation procedure, the following steps ar
 
 # Install WSL command
 
-You can now install everything you need to run WSL with a single command. Open PowerShell or Windows Command Prompt in **`administrator`** mode by right-clicking and selecting "Run as administrator", enter the wsl --install command, then restart your machine.
+You can now install everything you need to run WSL with a single command. Open PowerShell or Windows Command Prompt in **`administrator`** mode by right-clicking and selecting "Run as administrator", enter the following command, then restart your machine.
 
 ```powershell
 wsl --install -d Ubuntu
@@ -46,13 +47,27 @@ wsl --install -d Ubuntu
 
 Following a successful installation, it's necessary to reboot your system to ensure that the changes take effect. After rebooting, you should expect a Windows Command Prompt to automatically appear and proceed with the installation of the Ubuntu distribution. If the automatic installation didn't occur or if you prefer a different Linux distribution, please proceed to the next step to manually install your preferred Linux distribution.
 
+# WSL shell
+
+To enter the WSL shell from the Windows environment, execute the following command:
+
+```powershell
+wsl
+```
+
+You can exit the WSL shell into the Windows environment by executing the following command:
+
+```bash
+exit
+```
+
 # Change the default Linux distribution installed
 
-By default, the installed Linux distribution will be Ubuntu. This can be changed using the **`-d`** flag.
+~~By default, the installed Linux distribution will be Ubuntu. This can be changed using the **`-d`** flag.~~
 
-* To change the distribution installed, enter: **`wsl --install -d <Distribution Name>`**. Replace **`<Distribution Name>`** with the name of the distribution you would like to install.
-* To see a list of available Linux distributions available for download through the online store, enter: **`wsl --list --online`** or **`wsl -l -o`**.
-* To install additional Linux distributions after the initial install, you may also use the command: **`wsl --install -d <Distribution Name>`**.
+* ~~To change the distribution installed, enter: **`wsl --install -d <Distribution Name>`**. Replace **`<Distribution Name>`** with the name of the distribution you would like to install.~~
+* ~~To see a list of available Linux distributions available for download through the online store, enter: **`wsl --list --online`** or **`wsl -l -o`**.~~
+* ~~To install additional Linux distributions after the initial install, you may also use the command: **`wsl --install -d <Distribution Name>`**.~~
 
 If you run into an issue during the install process, check the [installation section of the troubleshooting guide](https://learn.microsoft.com/en-us/windows/wsl/troubleshooting#installation-issues).
 
@@ -65,7 +80,7 @@ Once the process of installing your Linux distribution with WSL is complete, ope
 
 # Update WSL
 
-Windows Subsystem for Linux (WSL) can be updated through the Windows Update feature. To manually update your WSL version to the latest one, you can use the following command:
+Windows Subsystem for Linux (WSL) can be updated through the Windows Update feature. To manually update your WSL version to the latest one, you can use the following command (from a Windows terminal):
 
 ```powershell
 wsl --update --web-download
@@ -97,31 +112,13 @@ If the command doesn't output correct versions, it means that an outdated versio
 
 If DNS is not working on WSL, please follow these simple instructions.
 
-Create or edit the file **`/etc/wsl.conf`** and add the following lines to the file to ensure that your DNS changes do not get overwritten:
-
-```conf
-[boot]
-systemd=true
-
-[network]
-generateResolvConf=false
-```
-
-This can be accomplished by executing the following command:
+Execute the following command (in WSL shell) to create the file **`/etc/wsl.conf`** with the proper content that ensures your DNS changes do not get overwritten:
 
 ```bash
 echo -e "\n[boot]\nsystemd=true\n\n[network]\ngenerateResolvConf=false\n" | sudo tee /etc/wsl.conf
 ```
 
-Create a file **`/etc/resolv.conf`**. If it exists, replace existing one with this new file.
-
-Put the following line in the file:
-
-```
-nameserver 8.8.8.8
-```
-
-Please not that you have to use your DNS server instead of `8.8.8.8`, which is a Google DNS server.
+This example uses the IP address `8.8.8.8` for the DNS server. However, please note that it is recommended to use your own DNS server.
 
 To get a list of available DNS servers, run the next command in a `cmd` window, and look for **DNS Servers**.
 
@@ -129,7 +126,8 @@ To get a list of available DNS servers, run the next command in a `cmd` window, 
 ipconfig /all
 ```
 
-The file can be modified by executing the following commands:
+Create a file **`/etc/resolv.conf`**. If it exists, delete the existing one and create this new file.
+This can be done by executing the following commands:
 
 ```bash
 sudo rm /etc/resolv.conf
@@ -142,6 +140,12 @@ Run the following command to make your changes permanent.
 
 ```bash
 sudo chattr +i /etc/resolv.conf
+```
+
+Exit the WSL shell by executing the following command:
+
+```bash
+exit
 ```
 
 In a `cmd` window, run the following command to restart WSL:
@@ -159,6 +163,12 @@ Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "Cisco AnyConnect"
 Restart WSL on the same elevated powershell, then you can open up wsl2 and it should connect to the internet.
 
 # Update and upgrade packages
+
+Enter the WSL shell from the Windows environment by executing the following command:
+
+```powershell
+wsl
+```
 
 It is recommended to regularly update and upgrade packages using the preferred package manager for your distribution. For Ubuntu or Debian, you can use the following command:
 

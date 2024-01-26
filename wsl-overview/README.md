@@ -25,7 +25,7 @@ The Windows Subsystem for Linux (WSL) enables us to run a GNU/Linux environment,
 
 Ubuntu has been chosen as the default distribution for WSL. In addition to `Cassandra`, we also install the `openjdk-8-jre` and `mc` packages on the distribution.
 
-# Cassndara on WSL
+# Cassandara on WSL
 
 Cassandra is installed and configured on WSL the same way it would be on any other Linux distribution. There are only minor configuration changes related to file storage. By default, Windows drives are visible in WSL as mounts, and we configure Cassandra to use such a mount for its database directory.
 
