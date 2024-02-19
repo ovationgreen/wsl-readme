@@ -23,14 +23,14 @@ To turn on WSL there must be executed the following commands:
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
-* Download the following file: [wsl_update_x64.msi](https://emerson-my.sharepoint.com/:u:/r/personal/borys_pukalyak_emerson_com/Documents/Ovation%20Green/Cassandra/Offline/wsl_update_x64.msi?csf=1&web=1&e=dBNY3g)
+* Download the following file: [wsl_update_x64.msi](https://emerson.sharepoint.com/:u:/r/sites/OvationGreenSCADA/Ovation%20Green%20SCADA%20binaries/Cassandra/Offline/wsl_update_x64.msi?csf=1&web=1&e=6sOLy0)
 * Run downloaded binary
 * Following a successful installation, it's necessary to reboot your system to ensure that the changes take effect.
  
 # Install Ubuntu
 
 The following steps allow installing Ubuntu on WSL in offline mode.
-* Download Ubuntu offline installer: [Ubuntu-setup.zip](https://emerson-my.sharepoint.com/:u:/r/personal/borys_pukalyak_emerson_com/Documents/Ovation%20Green/Cassandra/Offline/Ubuntu-setup.zip?csf=1&web=1&e=vLhDPN)
+* Download Ubuntu offline installer: [Ubuntu-setup.zip](https://emerson.sharepoint.com/:u:/r/sites/OvationGreenSCADA/Ovation%20Green%20SCADA%20binaries/Cassandra/Offline/Ubuntu-setup.zip?csf=1&web=1&e=GvYIj0)
 * Extract content of archive
 * Run the following binary: 
 ```powershell
@@ -41,7 +41,7 @@ After installation has been finished, you should expect an Ubuntu shell window o
 
 # Install Cassandra
 
-Cassandra and all dependent libraries for Ubuntu is located in file [cassandra-offline.zip](https://emerson-my.sharepoint.com/:u:/r/personal/borys_pukalyak_emerson_com/Documents/Ovation%20Green/Cassandra/Offline/cassandra-offline.zip?csf=1&web=1&e=pkXgI3). It is important to know that Cassandra and all dependencies are suitable for Ubuntu package described in chapter [Install Ubuntu package](#install-ubuntu).
+Cassandra and all dependent libraries for Ubuntu is located in file [cassandra-offline.zip](https://emerson.sharepoint.com/:u:/r/sites/OvationGreenSCADA/Ovation%20Green%20SCADA%20binaries/Cassandra/Offline/cassandra-offline.zip?csf=1&web=1&e=dpHsPU). It is important to know that Cassandra and all dependencies are suitable for Ubuntu package described in chapter [Install Ubuntu package](#install-ubuntu).
 * Extract content of .ZIP file **`cassandra-offline.zip`** to some folder on drive C: (for example **`c:\cassandra`**).
 * From Linux on WSL that folder is accessible at **`/mnt/c/cassandra`**
 * Run the following command:
