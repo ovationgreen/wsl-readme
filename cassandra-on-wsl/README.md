@@ -69,18 +69,12 @@ The following properties defined the listened IP interfaces and must be changed 
 **Node#1:**
 * `cluster_name`: the name of the cluster (common value for all nodes).
 * `seeds`: set to the remote IP address of the target machine (Node#1) accessible through the LAN.
-* `listen_address`: set to the local WSL IP address.
-* `broadcast_address`: set to the remote IP address of the target machine (Node#1) accessible through the LAN. 
+* `listen_address`: set to the local WSL IP address (Under local WSL IP address we consider IP address of Ethernet adapter vEthernet (WSL), but not 127.0.0.1).
+* `broadcast_address`: set to the remote IP address of the target\local machine (Node#1) accessible through the LAN. 
 * `rpc_address`: set to the "0.0.0.0".
-* `broadcast_rpc_address`: set to the remote IP address of the target machine (Node#1) accessible through the LAN. 
+* `broadcast_rpc_address`: set to the remote IP address of the target\local machine (Node#1) accessible through the LAN. 
 
-**Node#x:**
-* `cluster_name`: the name of the cluster (common value for all nodes).
-* `seeds`: set to the remote IP address of the target machine (Node#1) accessible through the LAN.
-* `listen_address`: set to the local WSL IP address.
-* `broadcast_address`: set to the remote IP address of the target machine (Node#x) accessible through the LAN. 
-* `rpc_address`: set to the "0.0.0.0".
-* `broadcast_rpc_address`: set to the remote IP address of the target machine (Node#x) accessible through the LAN. 
+For other nodes their local WSL IP \ IP addresses should be used for all settings, excepting `seeds`, for which remote IP address of the target machine (Node#1) should be set.
 
 # WSL and firewall
 
