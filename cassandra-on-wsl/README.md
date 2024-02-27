@@ -50,12 +50,37 @@ To obtain the IP address, use:
 
 Using `listenaddress=0.0.0.0` will listen on all [IPv4 ports](https://stackoverflow.com/questions/9987409/want-to-know-what-is-ipv4-and-ipv6#:%7E:text=The%20basic%20difference%20is%20the,whereas%20IPv6%20has%20128%20bits.).
 
-The folowing properties defined the listened IP interfaces and must be changed:
+The following properties defined the listened IP interfaces and must be changed:
 * `seeds`: set to the remote IP address of the target machine accessible through the LAN.
 * `listen_address`: set to the local WSL IP address.
-* `rpc_address`: TBD.
+* `rpc_address`: set to the local WSL IP address (for non cluster setup).
 
 In the event that Cassandra is not accessible from the LAN after configuring port proxy, it is recommended to restart the Cassandra service on WSL.
+
+# Configuring Cassandra Cluster on WSL
+To make it possible, mentioned above and other from this section settings should be configured on the all machines, that are going to be joined into the Cassandra cluster.
+
+Define the same properties, that will indicate the rack and dc for all nodes ("cassandra-rackdc.properties" file):
+* `rack`: a Cassandra rack is a logical grouping of nodes within the ring. In other words, a rack is a collection of servers.
+* `dc`: a datacenter is a logical set of racks. The datacenter should contain at least one rack.
+
+The following properties defined the listened IP interfaces and must be changed for all nodes as well:
+
+**Node#1:**
+* `cluster_name`: the name of the cluster (common value for all nodes).
+* `seeds`: set to the remote IP address of the target machine (Node#1) accessible through the LAN.
+* `listen_address`: set to the local WSL IP address.
+* `broadcast_address`: set to the remote IP address of the target machine (Node#1) accessible through the LAN. 
+* `rpc_address`: set to the "0.0.0.0".
+* `broadcast_rpc_address`: set to the remote IP address of the target machine (Node#1) accessible through the LAN. 
+
+**Node#x:**
+* `cluster_name`: the name of the cluster (common value for all nodes).
+* `seeds`: set to the remote IP address of the target machine (Node#1) accessible through the LAN.
+* `listen_address`: set to the local WSL IP address.
+* `broadcast_address`: set to the remote IP address of the target machine (Node#x) accessible through the LAN. 
+* `rpc_address`: set to the "0.0.0.0".
+* `broadcast_rpc_address`: set to the remote IP address of the target machine (Node#x) accessible through the LAN. 
 
 # WSL and firewall
 
