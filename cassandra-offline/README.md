@@ -23,14 +23,14 @@ To turn on WSL there must be executed the following commands:
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
-* Download the following file: [wsl_update_x64.msi](https://emerson.sharepoint.com/:u:/r/sites/OvationGreenSCADA/Ovation%20Green%20SCADA%20binaries/Cassandra/Offline/wsl_update_x64.msi?csf=1&web=1&e=6sOLy0)
+* Download the following file: [wsl_update_x64.msi](https://emerson.sharepoint.com/:u:/r/sites/OvationGreenSCADA/Ovation%20Green%20SCADA%20binaries/Cassandra-Linux/Offline/wsl_update_x64.msi?csf=1&web=1&e=LP5ZDK)
 * Run downloaded binary
 * Following a successful installation, it's necessary to reboot your system to ensure that the changes take effect.
  
 # Install Ubuntu
 
 The following steps allow installing Ubuntu on WSL in offline mode.
-* Download Ubuntu offline installer: [Ubuntu-setup.zip](https://emerson.sharepoint.com/:u:/r/sites/OvationGreenSCADA/Ovation%20Green%20SCADA%20binaries/Cassandra/Offline/Ubuntu-setup.zip?csf=1&web=1&e=GvYIj0)
+* Download Ubuntu offline installer: [Ubuntu-setup.zip](https://emerson.sharepoint.com/:u:/r/sites/OvationGreenSCADA/Ovation%20Green%20SCADA%20binaries/Cassandra-Linux/Offline/Ubuntu-setup.zip?csf=1&web=1&e=9PXlRX)
 * Extract content of archive
 * Run the following binary: 
 ```powershell
