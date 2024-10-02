@@ -41,7 +41,7 @@ After installation has been finished, you should expect an Ubuntu shell window o
 
 # Install Cassandra
 
-Cassandra and all dependent libraries for Ubuntu is located in file [cassandra-offline.zip](https://emerson.sharepoint.com/:u:/r/sites/OvationGreenSCADA/Ovation%20Green%20SCADA%20binaries/Cassandra/Offline/cassandra-offline.zip?csf=1&web=1&e=dpHsPU). It is important to know that Cassandra and all dependencies are suitable for Ubuntu package described in chapter [Install Ubuntu package](#install-ubuntu).
+Cassandra and all dependent libraries for Ubuntu is located in file [cassandra-offline.zip](https://emerson.sharepoint.com/:u:/r/sites/OvationGreenSCADA/Ovation%20Green%20SCADA%20binaries/Cassandra-Linux/Offline/cassandra-offline.zip?csf=1&web=1&e=1HxBJk). It is important to know that Cassandra and all dependencies are suitable for Ubuntu package described in chapter [Install Ubuntu package](#install-ubuntu).
 * Extract content of .ZIP file **`cassandra-offline.zip`** to some folder on drive C: (for example **`c:\cassandra`**).
 * From Linux on WSL that folder is accessible at **`/mnt/c/cassandra`**
 * Run the following command:
